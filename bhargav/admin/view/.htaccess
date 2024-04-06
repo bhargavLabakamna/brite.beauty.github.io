@@ -1,0 +1,15 @@
+    RewriteEngine On
+    # RewriteBase /localhost/new/bhargav/view/
+
+    # Redirect all requests to the index.php file
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    RewriteRule ^index(.*)$ index.php?url=$1 [QSA,L]
+    RewriteRule ^login(.*)$ login.php?url=$1 [QSA,L]
+    RewriteRule ^banner(.*)$ view_banner_list.php?url=$1 [QSA,L]
+    RewriteRule ^contact(.*)$ view_contact_inquiry_list.php?url=$1 [QSA,L]
+    RewriteRule ^category(.*)$ view_category_list.php?url=$1 [QSA,L]
+    RewriteRule ^gallery(.*)$ view_gallery_list.php?url=$1 [QSA,L]
+    # RewriteRule ^home-detail(.*)$ view_home_detail_list.php?url=$1 [QSA,L]
+    RewriteRule ^business-info(.*)$ view_business_info_addedit.php?url=$1 [QSA,L]
